@@ -1,0 +1,70 @@
+/* Estilos para la hoja de vida */
+*{
+    margin: 5px;
+    
+}
+/* Estilos para el encabezado */
+.cabecera{
+
+    text-align: center;
+}
+.cabecera img{
+
+    border-radius: 100%;
+}
+nav{
+
+    height: 50px;
+}
+nav a{
+    color: #000000;
+    display: inline-block;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+/* Estilos para el cuerpo de la página */
+body{
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background-color: #f5f5dc;
+}
+#perfil, #formacion, #contacto{
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.habilidades{
+    display: flex;
+    justify-content: space-between;
+}
+
+h1, h2, h3{
+    text-align: center;
+    font-family:"Oswald", sans-serif;
+    color: #333;
+}
+ul,ol{
+    list-style: none;
+ 
+}
+/* Estilos para el pie de página */
+.piePagina{
+    background-color: #f5f5dc;
+    padding: 20px;
+    text-align: center;
+}
+footer a{
+    color: #000000;
+    text-decoration: none;
+}
+a:hover{
+    color: rgba(4, 34, 99, 0.61);
+    text-decoration:dashed ;
+}
+hr{
+    border: 2px solid #504a4a;
+    margin: 20px 0;
+}

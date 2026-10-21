@@ -1,0 +1,89 @@
+/* 
+   RESPUESTAS A LAS PREGUNTAS:
+   
+   1. ¿Por qué es mejor un solo styles.css que poner los estilos en cada página?
+        porque si se cambia un color o fuente, solo se modifica en un archivo en lugar de editarlo página por página.
+    iseño homogéneo y profesional de forma automática.
+      - Código más limpio: Separa completamente la estructura (HTML) de la presentación visual (CSS).
+
+   2. Si un h2 tiene una regla de etiqueta y otra de clase con colores distintos, ¿cuál gana y por qué?
+      - Gana la regla de clase. Esto se debe al principio de "Especificidad" en CSS. Un selector de clase tiene un valor de especificidad mayor (0,0,1,0) que un selector de etiqueta (0,0,0,1). Por lo tanto, el navegador siempre priorizará el estilo de la clase sin importar el orden en el que estén escritos en el archivo.
+ */
+
+/* Estilos Generales y Colores del Negocio */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #ddd5d5;
+    color: #333333;
+}
+
+h1, h2 {
+    color: #0F2C59; /* Azul oscuro industrial */
+}
+
+h1 {
+    border-bottom: 4px solid #F2A900; /* Amarillo/Naranja ferretero */
+    padding-bottom: 10px;
+}
+
+/* 3. Estilo a los enlaces del menú con un selector descendiente (nav a) */
+nav {
+    background-color: #0F2C59;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 15px;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #F2A900;
+    color: #0F2C59;
+    border-radius: 3px;
+}
+
+/* 2. Estilo de la Tabla (Sin border="1" en el HTML) */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Combina los bordes en uno solo */
+    margin-top: 20px;
+    background-color: #ffffff;
+}
+
+th, td {
+    border: 1px solid #dddddd; /* Bordes de las celdas */
+    padding: 12px;             /* Espacio dentro de las celdas */
+    text-align: left;
+}
+
+/* Color de fondo para los encabezados th */
+th {
+    background-color: #0F2C59;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Fila interactiva para la tabla */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Pie de página */
+footer {
+    margin-top: 40px;
+    padding-top: 15px;
+    border-top: 1px solid #dddddd;
+    font-size: 0.9em;
+    color: #666666;
+    text-align: center;
+}

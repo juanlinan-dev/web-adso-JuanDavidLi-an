@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <link rel="stylesheet" href="estilo.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -8,17 +9,17 @@
 <body>
     <main>
         <h1>Registro de la biblioteca</h1>
-        <form action="#" class="Formulario">
+        <form action="" class="formulario" method="post">
             <fieldset>
                 <legend>Datos Personales</legend>
                 <div class="campo">
                     <label for="nombre">Nombre Completo:</label>
-                    <input type="text" id="nombre" name="nombre">
+                    <input type="text" id="nombre" name="nombre" required>
                 </div>
                 <br>
                 <div class="campo">
                     <label for="correo">Correo Electrónico:</label>
-                    <input type="email" id="correo" name="correo">
+                    <input type="email" id="correo" name="correo" required>
                 </div>
                 <br>
                 <div class="campo">
@@ -38,7 +39,7 @@
                 <br>
                 <div class="campo">
                     <label for="clave">Contraseña:</label>
-                    <input type="password" id="clave" name="clave">
+                    <input type="password" id="clave" name="clave" required minlength="8">
                 </div>
                 
 
@@ -49,7 +50,7 @@
                 <legend>Tu Perfil</legend>
                 <div class="campo">
                     <label for="Tipo">Tipo de Usuario:</label>
-                    <select id="Tipo" name="Tipo">
+                    <select id="Tipo" name="Tipo" required>
                         <option value="">Elije una opción</option>
                         <option value="aprendiz">Aprendiz</option>
                         <option value="instructor">Instructor</option>
@@ -60,15 +61,15 @@
                 <br>
                 <fieldset class="grupo">
                     <legend>Sede</legend>
-                    <label for="norte">
-                        <input type="radio" id="norte" name="sede" value="norte">
+                    <label for="norte" class="opcion">
+                        <input type="radio" id="norte" name="sede" value="norte" checked>
                         Norte
                     </label>
-                    <label for="centro">
+                    <label for="centro" class="opcion">
                         <input type="radio" id="centro" name="sede" value="centro">
                         Centro
                     </label>
-                    <label for="sur">
+                    <label for="sur" class="opcion">
                         <input type="radio" id="sur" name="sede" value="sur">
                         Sur
                     </label>
@@ -78,16 +79,16 @@
                 <fieldset class="grupo">
                     <legend>Temas que te interesan</legend>
 
-                    <label for="novelas">
+                    <label for="novelas" class="opcion">
                         <input type="checkbox" id="novelas" name="temas" value="novelas">
                         Novelas
                     </label>
 
-                    <label for="ciencia">
+                    <label for="ciencia" class="opcion">
                         <input type="checkbox" id="ciencia" name="temas" value="ciencia">
                         Ciencia
                     </label>
-                    <label for="tecnologia">
+                    <label for="tecnologia" class="opcion">
                         <input type="checkbox" id="" name="temas" value="tecnologia">
                         Tecnología
                     </label>

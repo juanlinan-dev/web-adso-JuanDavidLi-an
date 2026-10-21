@@ -33,7 +33,7 @@
                 <br>
                 <div class="campo">
                     <label for="documento">Documento de Identidad:</label>
-                    <input type="password" id="documento" name="documento">
+                    <input type="text" id="documento" name="documento">
                 </div>
                 <br>
                 <div class="campo">
@@ -74,6 +74,29 @@
                     </label>
                    
                 </fieldset>
+                
+                <fieldset class="grupo">
+                    <legend>Temas que te interesan</legend>
+
+                    <label for="novelas">
+                        <input type="checkbox" id="novelas" name="temas" value="novelas">
+                        Novelas
+                    </label>
+
+                    <label for="ciencia">
+                        <input type="checkbox" id="ciencia" name="temas" value="ciencia">
+                        Ciencia
+                    </label>
+                    <label for="tecnologia">
+                        <input type="checkbox" id="" name="temas" value="tecnologia">
+                        Tecnología
+                    </label>
+
+                </fieldset>
+                <div class="campo">
+                    <label for="comentario">¿Que libro te gustaria que tuvieramos?</label>
+                    <textarea name="comentario" id="comentario" rows="4"></textarea>
+                </div>
             </fieldset>
             <button type="submit" class="boton">Registrar</button>
 

@@ -69,7 +69,7 @@ input:focus-visible,select:focus-visible,textarea:focus-visible{
 
 /* Manejo de errores */
 
-input:user-invalid,select:user-invalid,textarea:user-invalid{
+input:user-invalid,select:user-invalid,textarea:user-invalid,.invalido{
     border-color: #dc2626;
     background-color: #fef2f2;
 }

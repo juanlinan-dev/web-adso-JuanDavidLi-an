@@ -1,15 +1,8 @@
-/* ==========================================================================
-   EXPLICACIÓN ENTRE PADDING Y MARGIN (Requerimiento 4)
-   
-   - PADDING (Relleno): Es el espacio interno de la caja. Va desde el contenido
-     del elemento hasta el borde interior de este. Si la caja tiene un fondo, 
-     el padding se pintará de ese color. Sirve para darle "respiro" al texto 
-     dentro de un botón o tarjeta.
-
-   - MARGIN (Margen): Es el espacio externo de la caja. Separa un elemento de 
-     otros elementos vecinos en la página. El margen es transparente y empuja 
-     las cajas de alrededor hacia afuera, sirviendo para estructurar el diseño.
-   ========================================================================== */
+/* 
+   - La diferencia entre el padding y el amrgin es que: el padding es elespacio interno de la caja. 
+    Va desde el contenido del elemento hasta el borde interior y el margin es
+    el espacio externo de la caja que separa un elemento de 
+     otros elementos que estan alrededor en la página. .*/
 
 * { 
     box-sizing: border-box; 
@@ -100,20 +93,27 @@ body {
 }
 
 .proyectos {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
+    justify-content: center;
+    margin: 0 auto;
+    
 }
 .tarjeta {
     background-color: #1e293b;
     border: 1px solid #334155;;
     border-radius: 1.25rem;
     padding: 2rem;
-    margin: 0;
+    margin: 0 auto;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
     display: flex;
     flex-direction: column;
-    text-align: left;
+    text-align: center;
+    justify-content: center;
+
+    width: 300px;
     
 
     transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), 
@@ -147,9 +147,6 @@ body {
 
 }
 
-/* ==========================================================================
-   BOTONES CON EFECTO DE DESPLAZAMIENTO (MICROINTERACCIONES)
-   ========================================================================== */
 .boton {
     position: relative;
     display: inline-flex;
@@ -169,7 +166,6 @@ body {
     transition: color 0.3s ease, border-color 0.3s ease;
 }
 
-/* Pseudo-elemento para efecto de relleno desde el fondo al pasar el cursor */
 .boton::before {
     content: '';
     position: absolute;

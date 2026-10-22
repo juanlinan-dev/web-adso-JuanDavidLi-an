@@ -37,7 +37,26 @@
                     <small id="error-telefono" class="error"></small>
                 </div>
 
-                 <label for="jornada" class="opcion">
+                 
+            </fieldset>
+
+            <fieldset>
+
+                <legend>Cursos</legend>
+
+                <div>
+                      <label for="programa">Programa de formación</label>
+                    <select id="programa" name="programa" required>
+                        <option value="">-- Seleccione un curso --</option>
+                        <option value="adso">Análisis y Desarrollo de Software (ADSO)</option>
+                        <option value="multimedia">Desarrollo de Multimedia</option>
+                        <option value="sistemas">Técnico en Sistemas</option>
+                    </select>
+                    <small id="error-programa" class="error"></small>
+                </div>
+
+                <div class="campo">
+                <label for="jornada" class="opcion">
                         <input type="radio"  name="jornada" value="Mañana" checked>
                         Mañana
                     </label>
@@ -50,56 +69,17 @@
                         Noche
                     </label>
                     <small id="error-jornada" class="error"></small>
+                    </div>
 
+                    <div class="campo">
                     <label for="terminos" class="opcion">
                         <input type="checkbox" id="terminos" name="terminos" value="aceptado" required>
                         Autorizacion de datos
                     </label>
-
-            </fieldset>
-
-            <fieldset>
-
-                <legend>Cursos</legend>
-                <div class="campo">
-                    <label for="Tipo">Tipo de Usuario:</label>
-                    <select id="Tipo" name="Tipo" required>
-                        <option value="">Elije una opción</option>
-                        <option value="aprendiz">Aprendiz</option>
-                        <option value="instructor">Instructor</option>
-                        <option value="visitante">Visitante</option>
-                    </select>
-                </div>
-
-                <br>
-                <fieldset class="grupo">
-                    <legend>Sede</legend>
-                   
-                   
-                </fieldset>
-                
-                <fieldset class="grupo">
-                    <legend>Temas que te interesan</legend>
-
-                    <label for="novelas" class="opcion">
-                        <input type="checkbox" id="novelas" name="temas" value="novelas">
-                        Novelas
-                    </label>
-
-                    <label for="ciencia" class="opcion">
-                        <input type="checkbox" id="ciencia" name="temas" value="ciencia">
-                        Ciencia
-                    </label>
-                    
-
-                </fieldset>
-                <div class="campo">
-                    <label for="comentario">¿Que libro te gustaria que tuvieramos?</label>
-                    <textarea name="comentario" id="comentario" rows="4"></textarea>
-                </div>
+                    </div>
             </fieldset>
             <button type="submit" class="boton">Registrar</button>
-
+            <section id="resumen"></section>
         </form>
 
     </main>

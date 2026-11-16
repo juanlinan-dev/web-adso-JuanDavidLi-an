@@ -84,7 +84,7 @@ body {
 
 .app-pie {
   grid-area: pie;
-  background: black;
+  background: white;
   color:#ff8801 ;
   text-align: center;
   padding: 16px;

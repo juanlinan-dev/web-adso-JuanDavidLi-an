@@ -1,0 +1,235 @@
+:root {
+  --principal: #6366f1;        
+  --principal-oscuro: #4f46e5;
+  --peligro: #f43f5e;       
+  --aviso: #d97706;           
+  --info: #0ea5e9;            
+  --exito-fondo: #d1fae5;    
+  --error-fondo: #ffe4e6;      
+  --aviso-fondo: #fef3c7;     
+  --info-fondo: #e0f2fe;      
+  
+  --texto: #0f172a;           
+  --texto-suave: #64748b;      
+  --fondo: #eef2ff;           
+  --superficie: #ffffff;      
+  --borde: #c7d2fe;            
+  
+  --radio: 14px;
+  --sombra: 0 10px 25px -5px rgba(99, 102, 241, 0.18);
+  --fuente: "Poppins", Arial, sans-serif;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--fuente);
+  background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
+  color: var(--texto);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+.contenedor-app {
+  width: 100%;
+  max-width: 480px;
+  height: fit-content;
+  background-color: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.barra-superior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo {
+  background: linear-gradient(135deg, var(--principal), #8b5cf6);
+  color: #ffffff;
+  padding: 0.45rem 0.9rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.3);
+}
+
+.navegacion {
+  flex: 1;
+  background-color: var(--fondo);
+  border: 1px solid var(--borde);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.2rem;
+}
+
+.navegacion a {
+  text-decoration: none;
+  color: var(--texto-suave);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.navegacion a:hover {
+  color: var(--principal);
+}
+
+/* Encabezado */
+.encabezado {
+  background: linear-gradient(135deg, var(--principal) 0%, #8b5cf6 100%);
+  color: #ffffff;
+  padding: 1rem;
+  text-align: center;
+  border-radius: var(--radio);
+  box-shadow: 0 4px 14px rgba(139, 92, 246, 0.25);
+}
+
+.encabezado h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Formulario y Alerta */
+.formulario-gasto {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.grupo-input {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.grupo-input input {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  border: 2px solid var(--borde);
+  border-radius: 10px;
+  font-family: var(--fuente);
+  font-size: 0.95rem;
+  color: var(--texto);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.grupo-input input:focus {
+  border-color: var(--principal);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.btn-agregar {
+  padding: 0 1.1rem;
+  border: none;
+  background-color: var(--principal);
+  color: #ffffff;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-agregar:hover {
+  background-color: var(--principal-oscuro);
+}
+
+.btn-agregar:active {
+  transform: scale(0.96);
+}
+
+/* Alerta llamativa */
+.alerta {
+  background-color: var(--error-fondo);
+  color: var(--peligro);
+  border: 1px solid #fecdd3;
+  padding: 0.6rem 0.85rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.oculto {
+  display: none;
+}
+
+/* Caja de lista */
+.caja-lista {
+  background-color: #f8fafc;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  padding: 1rem;
+  margin-top: 0.5rem;
+}
+
+.lista-items {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: var(--superficie);
+  padding: 0.65rem 0.85rem;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.item:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.04);
+}
+
+.item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--principal);
+  cursor: pointer;
+}
+
+/* Estilo para tareas/gastos completados (.hecha) */
+.item.hecha {
+  background-color: var(--exito-fondo);
+  border-color: #a7f3d0;
+}
+
+.item.hecha label {
+  text-decoration: line-through;
+  color: #065f46;
+}
+
+/* Contador inferior */
+.contador {
+  background-color: var(--info-fondo);
+  color: #0369a1;
+  border: 1px solid #bae6fd;
+  border-radius: 10px;
+  padding: 0.7rem 1rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manejo de Gastos</title>
+  <link rel="stylesheet" href="kit.css">
+</head>
+<body>
+
+  <div class="contenedor-app">
+    
+    <!-- Barra superior: Logo y Navegación con Flexbox -->
+    <nav class="barra-superior">
+      <div class="logo" aria-label="Logo de finanzas">$</div>
+      <div class="navegacion">
+        <a href="#">Inicio</a>
+        <a href="#">Historial</a>
+      </div>
+    </nav>
+
+    <!-- Encabezado principal -->
+    <header class="encabezado">
+      <h1>MANEJO DE GASTOS</h1>
+    </header>
+
+    <!-- Formulario para agregar gastos/tareas -->
+    <main>
+      <form class="formulario-gasto">
+        <div class="grupo-input">
+          <input 
+            type="text" 
+            placeholder="Ingrese su gasto..." 
+            aria-label="Ingrese su gasto"
+          >
+          <button type="submit" class="btn-agregar" aria-label="Agregar gasto">➕</button>
+        </div>
+        
+        <!-- Alerta de error con la clase oculto -->
+        <p class="alerta oculto" role="alert">⚠️ Por favor, ingresa un gasto válido.</p>
+      </form>
+
+      <!-- Lista de gastos/tareas -->
+      <section class="caja-lista">
+        <ul class="lista-items">
+          <li class="item hecha">
+            <input type="checkbox" id="gasto1" checked>
+            <label for="gasto1">Arriendo</label>
+          </li>
+          <li class="item hecha">
+            <input type="checkbox" id="gasto2" checked>
+            <label for="gasto2">Comida</label>
+          </li>
+          <li class="item">
+            <input type="checkbox" id="gasto3">
+            <label for="gasto3">Transporte</label>
+          </li>
+          <li class="item">
+            <input type="checkbox" id="gasto4">
+            <label for="gasto4">Ropa</label>
+          </li>
+          <li class="item hecha">
+            <input type="checkbox" id="gasto5" checked>
+            <label for="gasto5">Datos celulares</label>
+          </li>
+          <li class="item">
+            <input type="checkbox" id="gasto6">
+            <label for="gasto6">Salidas</label>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- Contador inferior -->
+    <footer class="contador">
+      <p>3 pendientes de 6</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>

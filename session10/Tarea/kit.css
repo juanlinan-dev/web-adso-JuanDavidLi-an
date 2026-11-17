@@ -211,7 +211,6 @@ body {
   cursor: pointer;
 }
 
-/* Estilo para tareas/gastos completados (.hecha) */
 .item.hecha {
   background-color: var(--exito-fondo);
   border-color: #a7f3d0;
@@ -222,7 +221,6 @@ body {
   color: #065f46;
 }
 
-/* Contador inferior */
 .contador {
   background-color: var(--info-fondo);
   color: #0369a1;

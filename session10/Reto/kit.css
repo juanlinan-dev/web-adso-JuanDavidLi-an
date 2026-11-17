@@ -1,0 +1,348 @@
+/* Importación de fuente moderna */
+@import url('https://googleapis.com');
+
+/* ==========================================================================
+   1. VARIABLES
+   ========================================================================== */
+:root {
+  --principal: #6366f1;        /* Índigo eléctrico */
+  --principal-oscuro: #4f46e5; /* Índigo profundo */
+  --secundario: #ec4899;       /* Fucsia vibrante */
+  --secundario-oscuro: #db2777;/* Fucsia profundo */
+  --peligro: #f43f5e;          /* Rosa coral */
+  --peligro-oscuro: #e11d48;   /* Coral intenso */
+  --exito: #10b981;            /* Esmeralda */
+  --aviso: #f59e0b;            /* Ámbar */
+  --info: #0ea5e9;             /* Cian brillante */
+
+  --exito-fondo: #d1fae5;
+  --error-fondo: #ffe4e6;
+  --aviso-fondo: #fef3c7;
+  --info-fondo: #e0f2fe;
+
+  --texto: #0f172a;
+  --texto-suave: #64748b;
+  --fondo: #eef2ff;
+  --superficie: #ffffff;
+  --borde: #c7d2fe;
+
+  --radio: 12px;
+  --sombra: 0 8px 20px -4px rgba(99, 102, 241, 0.15);
+  --fuente: "Poppins", Arial, sans-serif;
+}
+
+/* ==========================================================================
+   2. BASE
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--fuente);
+  background-color: #0f172a;
+  color: var(--texto);
+  line-height: 1.6;
+  padding: 2rem 1rem;
+}
+
+.contenedor-reto {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.seccion-pieza {
+  background-color: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  padding: 1.75rem;
+  box-shadow: var(--sombra);
+}
+
+.titulo-seccion {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--principal);
+  margin-bottom: 1.25rem;
+  border-bottom: 2px solid var(--fondo);
+  padding-bottom: 0.5rem;
+}
+
+/* Tipografía base */
+h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--texto);
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--texto);
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--texto);
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 0.75rem;
+}
+
+a {
+  color: var(--principal);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--secundario);
+}
+
+small {
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+  display: block;
+}
+
+/* ==========================================================================
+   3. COMPONENTES
+   ========================================================================== */
+
+/* --- Paleta de muestras --- */
+.grid-paleta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+.muestra-color {
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  background-color: var(--superficie);
+}
+
+.color-bloque {
+  height: 70px;
+  width: 100%;
+}
+
+.muestra-color code {
+  display: block;
+  padding: 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--texto);
+}
+
+/* --- Botones --- */
+.grupo-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.btn {
+  font-family: var(--fuente);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.65rem 1.35rem;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Foco visible accesible para teclado */
+.btn:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--info);
+  outline-offset: 3px;
+}
+
+.btn-principal {
+  background-color: var(--principal);
+  color: #ffffff;
+}
+
+.btn-principal:hover:not(:disabled) {
+  background-color: var(--principal-oscuro);
+  transform: translateY(-2px);
+}
+
+.btn-secundario {
+  background-color: var(--secundario);
+  color: #ffffff;
+}
+
+.btn-secundario:hover:not(:disabled) {
+  background-color: var(--secundario-oscuro);
+  transform: translateY(-2px);
+}
+
+.btn-peligro {
+  background-color: var(--peligro);
+  color: #ffffff;
+}
+
+.btn-peligro:hover:not(:disabled) {
+  background-color: var(--peligro-oscuro);
+  transform: translateY(-2px);
+}
+
+.btn:disabled {
+  background-color: #cbd5e1;
+  color: #64748b;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* --- Alertas (4 tipos) --- */
+.lista-alertas {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.alerta {
+  padding: 0.85rem 1.1rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-left: 5px solid;
+}
+
+.alerta-exito {
+  background-color: var(--exito-fondo);
+  color: #065f46;
+  border-color: var(--exito);
+}
+
+.alerta-error {
+  background-color: var(--error-fondo);
+  color: #9f1239;
+  border-color: var(--peligro);
+}
+
+.alerta-aviso {
+  background-color: var(--aviso-fondo);
+  color: #92400e;
+  border-color: var(--aviso);
+}
+
+.alerta-info {
+  background-color: var(--info-fondo);
+  color: #075985;
+  border-color: var(--info);
+}
+
+/* --- Insignias / Badges (3 tipos) --- */
+.insignia {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.insignia-principal {
+  background-color: var(--fondo);
+  color: var(--principal);
+  border: 1px solid var(--principal);
+}
+
+.insignia-exito {
+  background-color: var(--exito-fondo);
+  color: #065f46;
+}
+
+.insignia-peligro {
+  background-color: var(--error-fondo);
+  color: var(--peligro);
+}
+
+/* --- Inputs base --- */
+.campo-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  max-width: 320px;
+}
+
+input[type="text"] {
+  font-family: var(--fuente);
+  padding: 0.65rem 0.9rem;
+  border: 2px solid var(--borde);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: var(--texto);
+}
+
+/* ==========================================================================
+   4. ESTADOS
+   ========================================================================== */
+
+/* Spinner girando (.cargando) */
+.cargando {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  border: 4px solid var(--borde);
+  border-top-color: var(--principal);
+  border-radius: 50%;
+  animation: girar 0.8s linear infinite;
+}
+
+@keyframes girar {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Texto completado (.hecha) */
+.hecha {
+  text-decoration: line-through;
+  color: var(--texto-suave);
+  opacity: 0.8;
+}
+
+/* Input con error y mensaje pequeño */
+input.error {
+  border-color: var(--peligro);
+  background-color: var(--error-fondo);
+}
+
+small.error {
+  color: var(--peligro);
+  font-weight: 600;
+}
+
+/* Botón en estado activo (.activo) */
+.btn.activo {
+  background-color: var(--principal-oscuro);
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.25);
+  border-color: var(--texto);
+  transform: scale(0.97);
+}
+
+/* Elemento oculto (.oculto) */
+.oculto {
+  display: none;
+}

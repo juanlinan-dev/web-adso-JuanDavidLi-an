@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reto Sesión 10 - Kit UI</title>
+  <link rel="stylesheet" href="kit.css">
+</head>
+<body>
+
+  <main class="contenedor-reto">
+
+    <section class="seccion-pieza">
+      <h2 class="titulo-seccion">1. Paleta de Colores</h2>
+      <div class="grid-paleta">
+        <div class="muestra-color">
+          <div class="color-bloque" style="background-color: var(--principal);"></div>
+          <code>--principal</code>
+        </div>
+        <div class="muestra-color">
+          <div class="color-bloque" style="background-color: var(--secundario);"></div>
+          <code>--secundario</code>
+        </div>
+        <div class="muestra-color">
+          <div class="color-bloque" style="background-color: var(--peligro);"></div>
+          <code>--peligro</code>
+        </div>
+        <div class="muestra-color">
+          <div class="color-bloque" style="background-color: var(--exito);"></div>
+          <code>--exito</code>
+        </div>
+        <div class="muestra-color">
+          <div class="color-bloque" style="background-color: var(--aviso);"></div>
+          <code>--aviso</code>
+        </div>
+        <div class="muestra-color">
+          <div class="color-bloque" style="background-color: var(--info);"></div>
+          <code>--info</code>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion-pieza">
+      <h2 class="titulo-seccion">2. Tipografía</h2>
+      <h1>Encabezado Principal (H1)</h1>
+      <h2>Subtítulo de Sección (H2)</h2>
+      <h3>Título de Tarjeta o Bloque (H3)</h3>
+      <p>
+        Este es un párrafo de ejemplo utilizando la fuente Poppins. Incluye un 
+        <a href="#">enlace interactivo</a> para comprobar los estados de color y subrayado.
+      </p>
+      <small>Este es un texto pequeño (small) ideal para notas al pie o metadatos.</small>
+    </section>
+
+  
+    <section class="seccion-pieza">
+      <h2 class="titulo-seccion">3. Botones (Hover y Foco Visible)</h2>
+      <div class="grupo-flex">
+        <button type="button" class="btn btn-principal">Principal</button>
+        <button type="button" class="btn btn-secundario">Secundario</button>
+        <button type="button" class="btn btn-peligro">Peligro</button>
+        <button type="button" class="btn btn-principal" disabled>Deshabilitado</button>
+      </div>
+    </section>
+
+
+    <section class="seccion-pieza">
+      <h2 class="titulo-seccion">4. Alertas (4 tipos) e Insignias (3 tipos)</h2>
+      
+      <div class="lista-alertas" style="margin-bottom: 1.5rem;">
+        <div class="alerta alerta-exito" role="alert">✅ <strong>Éxito:</strong> Los datos se guardaron correctamente.</div>
+        <div class="alerta alerta-error" role="alert">❌ <strong>Error:</strong> No se pudo conectar con el servidor.</div>
+        <div class="alerta alerta-aviso" role="alert">⚠️ <strong>Aviso:</strong> Tu sesión expirará en 5 minutos.</div>
+        <div class="alerta alerta-info" role="alert">ℹ️ <strong>Información:</strong> Hay una nueva actualización disponible.</div>
+      </div>
+
+      <div class="grupo-flex">
+        <span class="insignia insignia-principal">Nuevo</span>
+        <span class="insignia insignia-exito">Completado</span>
+        <span class="insignia insignia-peligro">Urgente</span>
+      </div>
+    </section>
+
+
+    <section class="seccion-pieza">
+      <h2 class="titulo-seccion">5. Estados de Interfaz</h2>
+      
+      <div class="grupo-flex" style="margin-bottom: 1.5rem;">
+        
+        <div style="display: flex; align-items: center; gap: 0.6rem;">
+          <span class="cargando" aria-label="Cargando"></span>
+          <span>Procesando (.cargando)</span>
+        </div>
+
+        <button type="button" class="btn btn-principal activo">Botón Activo (.activo)</button>
+      </div>
+
+      <p class="hecha">Esta tarea ya fue completada y tiene la clase .hecha</p>
+
+    
+      <div class="campo-grupo" style="margin-top: 1rem;">
+        <label for="campo-correo"><strong>Correo electrónico:</strong></label>
+        <input type="text" id="campo-correo" class="error" value="usuario@invalido">
+        <small class="error">⚠️ El formato del correo electrónico no es válido.</small>
+      </div>
+
+      <p class="oculto">Este texto está oculto mediante la clase .oculto.</p>
+    </section>
+
+  </main>
+
+</body>
+</html>

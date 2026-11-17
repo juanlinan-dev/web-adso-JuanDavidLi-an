@@ -1,4 +1,8 @@
-/* ===== Base ===== */
+/* El Flexbox se usa para alinear contenido flexible en una dirección, como barras de navegación,
+ menús o botones dentro de una tarjeta.
+ Mientras el Grid es utilizado para estructurar diseños completos o cuadrículas estrictas, como galerías de productos
+ o la maquetación general de una página. */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,34 +10,33 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #fff5f8;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: white;
   color: #3a2a30;
 }
 
-/* ===== Encabezado (Flexbox) ===== */
 .encabezado {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 24px;
-  background: #f8c8d8;
+  padding: 1rem 2rem;
+  background-color: #e79a35;
+  border-bottom: 3px solid #2b49cf;
 }
 
 .logo {
-  height: 60px;
-  width: auto;
-  border-radius: 8px;
+  height: 48px;
+  border-radius: 100%;
 }
 
 .menu {
   display: flex;
-  gap: 20px;
+  gap: 1.5rem;
 }
 
 .menu a {
+  color: #2b49cf;
   text-decoration: none;
-  color: #7a2e4a;
   font-weight: bold;
 }
 
@@ -41,103 +44,108 @@ body {
   text-decoration: underline;
 }
 
-/* ===== Contenido principal ===== */
 main {
-  padding: 24px;
+  padding: 2rem 1rem;
 }
 
 h1 {
   text-align: center;
-  color: #b03a6a;
-  margin-bottom: 8px;
+  color: #2b49cf;
 }
 
 .intro {
   text-align: center;
-  margin-bottom: 24px;
+  margin: 0.5rem 0 2rem;
 }
 
-/* ===== Vitrina (Grid) ===== */
+
 .vitrina {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+  gap: 1.5rem;
+  justify-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .producto {
   position: relative;
-  background: #ffffff;
-  border: 1px solid #f0c0d0;
-  border-radius: 12px;
-  padding: 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 260px;
+  background-color: #ffffff;
+  border: 1px solid #2b49cf;
+  border-radius: 10px;
+  padding: 0.8rem;
 }
 
 .producto img {
   width: 100%;
-  height: 220px;
+  height: 200px;
   object-fit: cover;
   border-radius: 8px;
 }
 
 .categoria {
   display: inline-block;
-  margin-top: 10px;
-  padding: 2px 10px;
-  font-size: 0.8rem;
-  background: #fde0ea;
-  color: #b03a6a;
+  margin-top: 0.7rem;
+  padding: 0.2rem 0.6rem;
+  background-color: #fce4ec;
+  color: #2b49cf;
+  font-size: 0.8em;
   border-radius: 20px;
 }
 
 .producto h2 {
-  font-size: 1.05rem;
-  margin: 8px 0;
+  font-size: 1em;
+  margin: 0.5rem 0;
 }
 
 .precio {
   font-weight: bold;
-  color: #b03a6a;
+  color: #2b49cf;
 }
 
-/* Productos agotados */
 .agotado img {
-  filter: grayscale(100%);
-  opacity: 0.6;
+  opacity: 0.4;
+}
+
+.agotado h2,
+.agotado .precio {
+  color: #999999;
 }
 
 .etiqueta-agotado {
   position: absolute;
-  top: 20px;
-  left: 20px;
-  background: #555;
-  color: #fff;
-  padding: 4px 10px;
-  font-size: 0.8rem;
-  border-radius: 6px;
+  top: 1.2rem;
+  left: 1.2rem;
+  padding: 0.3rem 0.7rem;
+  background-color: #3a2a30;
+  color: #ffffff;
+  font-size: 0.85em;
+  font-weight: bold;
+  border-radius: 4px;
 }
 
-/* ===== Footer (Flexbox, columnas) ===== */
+/* Pie con columnas en Flexbox */
 .pie {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
-  gap: 20px;
-  padding: 24px;
-  background: #f8c8d8;
-  color: #5a1f38;
+  justify-content: space-around;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: #2b49cf;
+  color: #ffffff;
+}
+
+.columna {
+  flex: 1 1 200px;
 }
 
 .columna h3 {
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 }
 
-/*
-  Flexbox vs Grid:
-  Uso Flexbox cuando el contenido va en una sola dirección (una fila o una
-  columna), como el menú de navegación, el encabezado o el footer, y quiero
-  alinear y repartir los elementos entre ellos.
-  Uso Grid cuando necesito controlar filas y columnas a la vez, como la
-  vitrina de productos o un tablero, porque la cuadrícula se adapta sola al
-  ancho de la pantalla sin tener que fijar el tamaño de cada tarjeta.
-*/
+.columna p {
+  margin-bottom: 0.3rem;
+}

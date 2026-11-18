@@ -107,7 +107,6 @@ img {
   background: var(--azul-oscuro);
   color: var(--blanco);
 }
-
 .portada {
   max-width: 1140px;
   margin: 0 auto;
@@ -118,9 +117,9 @@ img {
 }
 .modal {
   position: fixed;
-  inset: 0;                /* toda la pantalla */
-  z-index: 30;             /* encima de todo */
-  display: none;           /* escondida al inicio */
+  inset: 0;               
+  z-index: 30;             
+  display: none;           
   place-items: center;
   padding: 1rem;
   background-color: rgba(0, 0, 0, 0.6);
@@ -443,7 +442,7 @@ h2::after {
   from {opacity: 0; transform: translateY(16px);}
   to {opacity: 1; transform: translateY(0);}
 }
-/* ===== TABLETA (768px en adelante) ===== */
+
 @media (min-width: 768px) {
 
   .contenedor-header {

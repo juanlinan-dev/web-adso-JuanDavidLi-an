@@ -33,9 +33,6 @@ img {
 
 /* ===== ENCABEZADO ===== */
 .encabezado {
-  position: sticky;
-  top: 0;
-  z-index: 100;
   background: #f97316;
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--borde);

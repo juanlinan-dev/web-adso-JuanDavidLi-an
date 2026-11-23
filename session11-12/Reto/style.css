@@ -233,14 +233,26 @@ img {
   grid-template-columns: 1fr;
   gap: 20px;
 }
-
 .tarjeta {
+  position: relative;
   background: var(--blanco);
   padding: 28px;
   border-radius: 16px;
   border: 1px solid var(--borde);
   box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.04);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.insignia-tarjeta {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: var(--naranja-suave);
+  color: var(--naranja-hover);
+  border: 1px solid #fed7aa;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 99px;
 }
 
 .tarjeta:hover {

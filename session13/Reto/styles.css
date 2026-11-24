@@ -1,0 +1,44 @@
+/* Ajustes de marca de Ferretería Yireh (sin Flexbox, Grid ni media queries propias) */
+:root {
+  --bs-body-font-family: "Plus Jakarta Sans", Arial, sans-serif;
+  --yireh-naranja: #f97316;
+  --yireh-naranja-oscuro: #ea580c;
+  --yireh-naranja-activo: #c2410c;
+  --yireh-azul: #1e3a8a;
+  --yireh-azul-oscuro: #0f172a;
+}
+
+.marca-acento {
+  color: var(--yireh-azul);
+}
+
+.marca-subtitulo {
+  color: var(--yireh-naranja-oscuro);
+}
+
+/* Botón principal con naranja de marca (reemplaza el azul por defecto) */
+.btn-primary {
+  --bs-btn-bg: var(--yireh-naranja);
+  --bs-btn-border-color: var(--yireh-naranja);
+  --bs-btn-color: #ffffff;
+  --bs-btn-hover-bg: var(--yireh-naranja-oscuro);
+  --bs-btn-hover-border-color: var(--yireh-naranja-oscuro);
+  --bs-btn-hover-color: #ffffff;
+  --bs-btn-active-bg: var(--yireh-naranja-activo);
+  --bs-btn-active-border-color: var(--yireh-naranja-activo);
+  --bs-btn-active-color: #ffffff;
+  --bs-btn-focus-shadow-rgb: 249, 115, 22;
+}
+
+/* Botón delineado con azul de marca */
+.btn-outline-primary {
+  --bs-btn-color: var(--yireh-azul);
+  --bs-btn-border-color: var(--yireh-azul);
+  --bs-btn-hover-bg: var(--yireh-azul);
+  --bs-btn-hover-border-color: var(--yireh-azul);
+  --bs-btn-hover-color: #ffffff;
+  --bs-btn-active-bg: var(--yireh-azul-oscuro);
+  --bs-btn-active-border-color: var(--yireh-azul-oscuro);
+  --bs-btn-active-color: #ffffff;
+  --bs-btn-focus-shadow-rgb: 30, 58, 138;
+}
